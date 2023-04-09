@@ -1,0 +1,65 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.6/dist/web/static/pretendard.css');
+@import url('https://webfontworld.github.io/gangwon/GangwonEduAll.css');
+
+body {
+  margin: 0;
+  font-family: GangwonEduAll, Pretendard, -apple-system, BlinkMacSystemFont,
+    system-ui, Roboto, 'Helvetica Neue', 'Segoe UI', 'Apple SD Gothic Neo',
+    'Noto Sans KR', 'Malgun Gothic', sans-serif;
+
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-image: linear-gradient(
+      rgba(255, 255, 255, 0.8),
+      rgba(255, 255, 255, 0.8)
+    ),
+    url(./assets/images/bg.jpeg);
+  background-repeat: no-repeat;
+  background-position: top center;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+::-webkit-scrollbar-thumb {
+  background-color: #b79f93;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: #ebded3;
+  border-radius: 0 10px 10px 0;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+h1 {
+  font-size: 32px;
+  font-weight: 900;
+}
+h2 {
+  font-size: 26px;
+  font-weight: 900;
+}
+h3 {
+  font-size: 20px;
+  font-weight: 900;
+}
+h4 {
+  font-size: 16px;
+  font-weight: 900;
+}
+h5 {
+  font-size: 10px;
+  font-weight: 900;
+}

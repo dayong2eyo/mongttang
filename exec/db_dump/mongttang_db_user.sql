@@ -1,0 +1,68 @@
+-- MariaDB dump 10.19  Distrib 10.11.2-MariaDB, for Win64 (AMD64)
+--
+-- Host: j8a308.p.ssafy.io    Database: mongttang_db
+-- ------------------------------------------------------
+-- Server version	10.3.38-MariaDB-0ubuntu0.20.04.1
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8 */;
+/*!40103 SET @OLD_TIME_ZONE=@@TIME_ZONE */;
+/*!40103 SET TIME_ZONE='+00:00' */;
+/*!40014 SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0 */;
+/*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;
+/*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
+/*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
+
+--
+-- Table structure for table `user`
+--
+
+DROP TABLE IF EXISTS `user`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `user` (
+  `user_id` int(11) NOT NULL AUTO_INCREMENT,
+  `created_time` datetime DEFAULT NULL,
+  `updated_time` datetime DEFAULT NULL,
+  `user_info` varchar(255) DEFAULT NULL,
+  `user_nickname` varchar(50) DEFAULT NULL,
+  `user_private_key` varchar(255) DEFAULT NULL,
+  `user_profile_img` varchar(255) DEFAULT NULL,
+  `user_provider` varchar(6) NOT NULL,
+  `user_provider_id` varchar(255) NOT NULL,
+  `user_role` varchar(11) NOT NULL,
+  PRIMARY KEY (`user_id`)
+) ENGINE=InnoDB AUTO_INCREMENT=10 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `user`
+--
+
+LOCK TABLES `user` WRITE;
+/*!40000 ALTER TABLE `user` DISABLE KEYS */;
+INSERT INTO `user` VALUES
+(1,'2023-04-07 03:16:11','2023-04-07 03:48:16',NULL,'애옹','2HJm1I4Jonwp7x0uj1oaBZDlO0PomCBYyFDFlgfpAP8XQJzRSzEXYZB8A7H364udaV/QIg/KN92j0B4yOx02klR83AAhofWuGE0t8j0XjSE=','users/1/profile2164660467524263','kakao','2648266948','ROLE_READER'),
+(2,'2023-04-07 03:16:22','2023-04-07 03:40:30','다작이 좋아요~','양옹이','PnyJTxdLPKFBlxvP3/dMhMuv2GsGIr/nYtNVf86pLESPFdH2TlX7IZ1je792socQCHkIFfTCNvqVqsbcnOkThBBsWXtD4h3PaF7XvflYigw=','defaultImg','kakao','2636360759','ROLE_READER'),
+(3,'2023-04-07 03:17:51','2023-04-07 03:38:21',NULL,'나작가','Q41D3K7boVEpPkWslUtwvrk1v3r7tsw+e3MInAAzOfQuMJeJ+2cvyDp6A5ukx7BrjGAtF15TqPjuTT26Ink0O6Cx+1tClch89vtPO3oaamw=','users/3/profile2165217839788556','kakao','2625889279','ROLE_READER'),
+(4,'2023-04-07 03:19:08','2023-04-07 03:31:11','저는 꿈을 꾸어요','꿈을꾸는무지','EelWRirDV+ZqIZuEmLAmdJsZf7jqR4SWbbkoDMrSkUnCKu+6d7IywphOS/N5VnLpBluR1bB6GZD2TvWq1DEPLP/m+F2LHpkf0qyqMMjmtaE=','users/4/profile2164788586456513','google','101391545514983223139','ROLE_READER'),
+(5,'2023-04-07 03:27:34','2023-04-07 03:32:59',NULL,'몽땅연필관계자','zunQpGDvFLiWNj0O+OXB7jRbLgI+QcaBjpZpctXG7HDmTOoEDRQpPM4GVBsoxdttsDhY+fecuZaqIJ0Hkvw6jkNWT7pocJqQqqp0yG5jU8Q=','users/5/profile2164888227846181','google','113802833977730652967','ROLE_READER'),
+(6,'2023-04-07 03:28:08','2023-04-07 03:35:02',NULL,'졸린무지','XdKVRi8Lws1jruZJcN0ixs5VDcLYGHvJgRys8bLbZ2re5k5pdLkivCwcU4Jb5UfqNhckiX/rrwT430IBy68JTlKNYdXMigbjrJ+3wD7pBEM=','users/6/profile2165019087598544','google','118116470445125717376','ROLE_READER'),
+(7,'2023-04-07 03:34:46','2023-04-07 03:39:19',NULL,'골든_리트리버','FJsF7fezKSwyrbcmtiVNZ3foAdsv+cSZYyXfxauKK6qTQT5FoWRWCt7j06/R3E4gXywN3U8gO+MF0u/Us4aBh4QLCui3oUSLrpDMxs6Se0Y=','users/7/profile2165275845358813','kakao','2735848171','ROLE_READER'),
+(8,'2023-04-07 03:41:48','2023-04-07 03:42:09',NULL,'나작가동생','QTV2JGE5bxt91KhYJ+WAg8AP0yeTDyCAy4Zcnm1RC1/9q3n0qgSHJ+T+ow/ap+N/xwIt60w21z2z7gY0zdNSPhGy6Q6CuUwHotAmx3iz8RA=','defaultImg','google','113249778761945290716','ROLE_READER'),
+(9,'2023-04-07 03:44:58','2023-04-07 03:44:59',NULL,'google_2165615632187919','EWblpsFHqb4bQTUOcOq5dIIJqR0tdypEc7HZ3u6KHx+L709rjbEFoAh+KdyHsRqn9hmMFOV4/DKFtHyPSa2RqKjXAD6i44PHleP5i5L8lY8=','defaultImg','google','109447725346566285082','ROLE_READER');
+/*!40000 ALTER TABLE `user` ENABLE KEYS */;
+UNLOCK TABLES;
+/*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
+
+/*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
+/*!40014 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS */;
+/*!40014 SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS */;
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
+/*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
+
+-- Dump completed on 2023-04-07 13:11:27

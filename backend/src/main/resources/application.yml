@@ -1,0 +1,22 @@
+server:
+  port: 8308
+  servlet:
+    context-path: /
+    encoding:
+      charset: utf-8
+      enabled: true
+      force: true
+
+spring:
+  mvc:
+    pathmatch:
+      matching-strategy: ant_path_matcher
+  profiles:
+    include: dev
+
+
+logging:
+  level:
+    com.ssafy.mongttang: debug
+
+
